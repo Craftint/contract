@@ -1,0 +1,609 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PC.####",
+ "creation": "2024-01-25 14:40:37.151570",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "sales_order",
+  "start_date",
+  "currency",
+  "report_currency_rate",
+  "contract_value",
+  "approved_variation",
+  "total_approved_value",
+  "unapproved_variation",
+  "total_value",
+  "total_work_done",
+  "rev_contract_balance",
+  "column_break_6wu8g",
+  "company",
+  "type",
+  "no",
+  "date",
+  "payment_no",
+  "due_date",
+  "work_done_upto",
+  "jv_no",
+  "application_no",
+  "remarks",
+  "section_break_mlrtr",
+  "custom_tasks",
+  "section_break_1ozd3",
+  "work_done",
+  "column_break_rdoto",
+  "work_done_to_date",
+  "column_break_swxis",
+  "work_done_previous",
+  "column_break_mizec",
+  "work_done_this_payment",
+  "section_break_j6igq",
+  "material",
+  "column_break_7r7vb",
+  "material_to_date",
+  "column_break_hj3z9",
+  "material_previous",
+  "column_break_pfwko",
+  "material_this_payment",
+  "section_break_h9ysh",
+  "total_due_for_payment",
+  "column_break_7xeeu",
+  "total_due_to_date",
+  "column_break_5urno",
+  "total_due_previous",
+  "column_break_jwmmq",
+  "total_due_this_payment",
+  "section_break_dexqa",
+  "adv_pay_reduction",
+  "column_break_o1fww",
+  "adv_to_date",
+  "column_break_qkbra",
+  "adv_previous",
+  "column_break_tcpnc",
+  "adv_this_payment",
+  "section_break_pqv7l",
+  "retention",
+  "column_break_cojoi",
+  "ret_to_date",
+  "column_break_n6d1l",
+  "ret_previous",
+  "column_break_au7mg",
+  "ret_this_payment",
+  "section_break_gmnwt",
+  "retention_material",
+  "column_break_6mjkq",
+  "rm_to_date",
+  "column_break_gptcg",
+  "rm_previous",
+  "column_break_67pot",
+  "rm_this_payment",
+  "section_break_8qfle",
+  "other_deduction",
+  "column_break_x8ags",
+  "od_to_date",
+  "column_break_szzkl",
+  "od_previous",
+  "column_break_d7ll6",
+  "od_this_payment",
+  "section_break_tpa7h",
+  "total_deduction",
+  "column_break_wlohj",
+  "td_this_date",
+  "column_break_colol",
+  "td_previous",
+  "column_break_mtcks",
+  "td_this_payment",
+  "section_break_byzgx",
+  "net_payment_due",
+  "column_break_6ojin",
+  "np_to_date",
+  "column_break_j6ekn",
+  "np_previous",
+  "column_break_nzmay",
+  "np_this_payment",
+  "section_break_h4wwo",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "report_currency_rate",
+   "fieldtype": "Float",
+   "label": "Report Currency Rate"
+  },
+  {
+   "fieldname": "contract_value",
+   "fieldtype": "Currency",
+   "label": "Contract Value"
+  },
+  {
+   "fieldname": "approved_variation",
+   "fieldtype": "Currency",
+   "label": "Approved Variation"
+  },
+  {
+   "fieldname": "total_approved_value",
+   "fieldtype": "Currency",
+   "label": "Total Approved Value"
+  },
+  {
+   "fieldname": "unapproved_variation",
+   "fieldtype": "Currency",
+   "label": "Unapproved Variation"
+  },
+  {
+   "fieldname": "total_value",
+   "fieldtype": "Currency",
+   "label": "Total Value"
+  },
+  {
+   "fieldname": "total_work_done",
+   "fieldtype": "Currency",
+   "label": "Total Work Done"
+  },
+  {
+   "fieldname": "rev_contract_balance",
+   "fieldtype": "Currency",
+   "label": "Rev Contract Balance"
+  },
+  {
+   "fieldname": "column_break_6wu8g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type"
+  },
+  {
+   "fieldname": "no",
+   "fieldtype": "Data",
+   "label": "No"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "payment_no",
+   "fieldtype": "Int",
+   "label": "Payment No"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "default": "Today",
+   "fieldname": "work_done_upto",
+   "fieldtype": "Date",
+   "label": "Work Done Upto"
+  },
+  {
+   "fieldname": "jv_no",
+   "fieldtype": "Link",
+   "label": "JV No",
+   "options": "Journal Entry"
+  },
+  {
+   "fieldname": "application_no",
+   "fieldtype": "Data",
+   "label": "Application No"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "section_break_mlrtr",
+   "fieldtype": "Section Break",
+   "label": "Task Summary"
+  },
+  {
+   "fieldname": "custom_tasks",
+   "fieldtype": "Table",
+   "options": "Task Summary"
+  },
+  {
+   "fieldname": "section_break_1ozd3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "work_done",
+   "fieldtype": "Heading",
+   "label": "Work Done"
+  },
+  {
+   "fieldname": "column_break_rdoto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "work_done_to_date",
+   "fieldtype": "Currency",
+   "label": "To date"
+  },
+  {
+   "fieldname": "column_break_swxis",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "work_done_previous",
+   "fieldtype": "Currency",
+   "label": "Previous"
+  },
+  {
+   "fieldname": "column_break_mizec",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "work_done_this_payment",
+   "fieldtype": "Currency",
+   "label": "This Payment"
+  },
+  {
+   "fieldname": "section_break_j6igq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "material",
+   "fieldtype": "Heading",
+   "label": "Material"
+  },
+  {
+   "fieldname": "column_break_7r7vb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "material_to_date",
+   "fieldtype": "Currency",
+   "label": "To date"
+  },
+  {
+   "fieldname": "column_break_hj3z9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "material_previous",
+   "fieldtype": "Currency",
+   "label": "Previous"
+  },
+  {
+   "fieldname": "column_break_pfwko",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "material_this_payment",
+   "fieldtype": "Data",
+   "label": "This Payment"
+  },
+  {
+   "fieldname": "section_break_h9ysh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_due_for_payment",
+   "fieldtype": "Heading",
+   "label": "Total Due for Payment"
+  },
+  {
+   "fieldname": "column_break_7xeeu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_due_to_date",
+   "fieldtype": "Currency",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "column_break_5urno",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_due_previous",
+   "fieldtype": "Currency",
+   "label": "Previous"
+  },
+  {
+   "fieldname": "column_break_jwmmq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_due_this_payment",
+   "fieldtype": "Currency",
+   "label": "This Payment"
+  },
+  {
+   "fieldname": "section_break_dexqa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "adv_pay_reduction",
+   "fieldtype": "Heading",
+   "label": "Adv Pay Reduction"
+  },
+  {
+   "fieldname": "column_break_o1fww",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adv_to_date",
+   "fieldtype": "Currency",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "column_break_qkbra",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adv_previous",
+   "fieldtype": "Currency",
+   "label": "Previous"
+  },
+  {
+   "fieldname": "column_break_tcpnc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adv_this_payment",
+   "fieldtype": "Currency",
+   "label": "This Payment"
+  },
+  {
+   "fieldname": "section_break_pqv7l",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "retention",
+   "fieldtype": "Heading",
+   "label": "Retention"
+  },
+  {
+   "fieldname": "column_break_cojoi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ret_to_date",
+   "fieldtype": "Currency",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "column_break_n6d1l",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ret_previous",
+   "fieldtype": "Currency",
+   "label": "Previous"
+  },
+  {
+   "fieldname": "column_break_au7mg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ret_this_payment",
+   "fieldtype": "Currency",
+   "label": "This Payment"
+  },
+  {
+   "fieldname": "section_break_gmnwt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "retention_material",
+   "fieldtype": "Heading",
+   "label": "Retention Material"
+  },
+  {
+   "fieldname": "column_break_6mjkq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rm_to_date",
+   "fieldtype": "Currency",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "column_break_gptcg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rm_previous",
+   "fieldtype": "Currency",
+   "label": "Previous"
+  },
+  {
+   "fieldname": "column_break_67pot",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rm_this_payment",
+   "fieldtype": "Currency",
+   "label": "This Payment"
+  },
+  {
+   "fieldname": "section_break_8qfle",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "other_deduction",
+   "fieldtype": "Heading",
+   "label": "Other Deduction"
+  },
+  {
+   "fieldname": "column_break_x8ags",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "od_to_date",
+   "fieldtype": "Currency",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "column_break_szzkl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "od_previous",
+   "fieldtype": "Currency",
+   "label": "Previous"
+  },
+  {
+   "fieldname": "column_break_d7ll6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "od_this_payment",
+   "fieldtype": "Currency",
+   "label": "This Payment"
+  },
+  {
+   "fieldname": "section_break_tpa7h",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_deduction",
+   "fieldtype": "Heading",
+   "label": "Total Deduction"
+  },
+  {
+   "fieldname": "column_break_wlohj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "td_this_date",
+   "fieldtype": "Currency",
+   "label": "This Date"
+  },
+  {
+   "fieldname": "column_break_colol",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "td_previous",
+   "fieldtype": "Currency",
+   "label": "Previous"
+  },
+  {
+   "fieldname": "column_break_mtcks",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "td_this_payment",
+   "fieldtype": "Currency",
+   "label": "This Payment"
+  },
+  {
+   "fieldname": "section_break_byzgx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "net_payment_due",
+   "fieldtype": "Heading",
+   "label": "Net Payment Due"
+  },
+  {
+   "fieldname": "column_break_6ojin",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "np_to_date",
+   "fieldtype": "Currency",
+   "label": " To Date"
+  },
+  {
+   "fieldname": "column_break_j6ekn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "np_previous",
+   "fieldtype": "Currency",
+   "label": "Previous"
+  },
+  {
+   "fieldname": "column_break_nzmay",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "np_this_payment",
+   "fieldtype": "Currency",
+   "label": "This Payment"
+  },
+  {
+   "fieldname": "section_break_h4wwo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Payment Certificate",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-02-01 15:44:17.315269",
+ "modified_by": "Administrator",
+ "module": "Contract",
+ "name": "Payment Certificate",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

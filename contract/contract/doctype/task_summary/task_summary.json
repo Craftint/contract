@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-31 14:19:10.697230",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "sales_order_item",
+  "total",
+  "column_break_znqdd",
+  "qty",
+  "task",
+  "date",
+  "section_break_5rteh",
+  "previous_amount",
+  "column_break_ycj3m",
+  "current_amount",
+  "section_break_otzfv",
+  "pc_raised",
+  "column_break_khn4s",
+  "pc_current",
+  "column_break_9cogd",
+  "pc_this"
+ ],
+ "fields": [
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task",
+   "options": "Task"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date"
+  },
+  {
+   "fieldname": "previous_amount",
+   "fieldtype": "Currency",
+   "label": "Previous Task Amount"
+  },
+  {
+   "fieldname": "current_amount",
+   "fieldtype": "Currency",
+   "label": "Current Task Amount"
+  },
+  {
+   "fieldname": "pc_raised",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Work Done Previous"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "pc_current",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Work Done Current"
+  },
+  {
+   "fieldname": "pc_this",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Work Done This "
+  },
+  {
+   "fieldname": "sales_order_item",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Sales Order Item"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total (To be done)"
+  },
+  {
+   "fieldname": "column_break_znqdd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5rteh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ycj3m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_otzfv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_khn4s",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9cogd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Quantity Completed"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-02-04 23:36:14.403450",
+ "modified_by": "Administrator",
+ "module": "Contract",
+ "name": "Task Summary",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

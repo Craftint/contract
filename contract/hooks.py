@@ -27,7 +27,10 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+	"Project" : "public/js/project.js",
+	"Task": "public/js/task.js"
+	}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -116,13 +119,20 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Sales Invoice": {
+		"on_submit": "contract.events.sales_invoice.make_gl_entries",
+		"on_cancel": "contract.events.sales_invoice.update_project",
+	},
+	"Task": {
+		"before_save": "contract.events.task.update_progress",
+		"validate": "contract.events.task.validate_qty",
+	},
+	"Project": {
+		"after_insert": "contract.events.project.create_task",
+		"before_insert": "contract.events.project.update_task_summary",
+	}
+}
 
 # Scheduled Tasks
 # ---------------
