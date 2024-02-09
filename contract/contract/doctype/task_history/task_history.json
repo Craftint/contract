@@ -7,13 +7,25 @@
  "engine": "InnoDB",
  "field_order": [
   "date",
+  "section_break_j7b3l",
   "previous_per",
+  "prev_qty",
+  "column_break_ohzt7",
   "current_per",
+  "current_qty",
+  "column_break_xadbw",
+  "this_per",
+  "this_qty",
+  "section_break_bgbe9",
   "previous_amount",
-  "current_amount"
+  "column_break_kfvb1",
+  "current_amount",
+  "column_break_b8ivh",
+  "this_amount"
  ],
  "fields": [
   {
+   "columns": 2,
    "fieldname": "date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -23,35 +35,93 @@
   {
    "fieldname": "previous_per",
    "fieldtype": "Percent",
-   "in_list_view": 1,
    "label": "Previous per",
    "read_only": 1
   },
   {
    "fieldname": "current_per",
    "fieldtype": "Percent",
-   "in_list_view": 1,
    "label": "Current per",
    "read_only": 1
   },
   {
+   "columns": 1,
    "fieldname": "previous_amount",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Previous Amount",
    "read_only": 1
   },
   {
+   "columns": 1,
    "fieldname": "current_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Current Amount",
    "read_only": 1
+  },
+  {
+   "fieldname": "this_per",
+   "fieldtype": "Percent",
+   "label": "This per"
+  },
+  {
+   "columns": 2,
+   "fieldname": "this_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "This Amount"
+  },
+  {
+   "fieldname": "section_break_j7b3l",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "prev_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Prev Qty"
+  },
+  {
+   "columns": 1,
+   "fieldname": "current_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Current Qty"
+  },
+  {
+   "columns": 2,
+   "fieldname": "this_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "This Qty"
+  },
+  {
+   "fieldname": "column_break_ohzt7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xadbw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_kfvb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_b8ivh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_bgbe9",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-02-01 15:44:57.319989",
+ "modified": "2024-02-08 23:26:43.479506",
  "modified_by": "Administrator",
  "module": "Contract",
  "name": "Task History",

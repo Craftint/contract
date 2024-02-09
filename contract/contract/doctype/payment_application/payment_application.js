@@ -18,16 +18,16 @@ frappe.ui.form.on('Payment Application', {
 		});
 	},
 	refresh:function (frm) {
-		frm.add_custom_button('Ledger', ()=> {
-			frappe.route_options = {
-				"voucher_no": frm.doc.name,
-				"from_date": frm.doc.date,
-				"to_date": frm.doc.date,
-				"company": frm.doc.company,
-				"group_by": '',
-			};
-			frappe.set_route("query-report", "General Ledger");
-		}, 'View');
+		// frm.add_custom_button('Ledger', ()=> {
+		// 	frappe.route_options = {
+		// 		"voucher_no": frm.doc.name,
+		// 		"from_date": frm.doc.date,
+		// 		"to_date": frm.doc.date,
+		// 		"company": frm.doc.company,
+		// 		"group_by": '',
+		// 	};
+		// 	frappe.set_route("query-report", "General Ledger");
+		// }, 'View');
 
 		frm.add_custom_button(__('Sales Invoice'), () => {
             frappe.model.open_mapped_doc({

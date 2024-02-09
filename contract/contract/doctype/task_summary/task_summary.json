@@ -10,6 +10,7 @@
   "item",
   "sales_order_item",
   "total",
+  "total_qty",
   "column_break_znqdd",
   "qty",
   "task",
@@ -27,35 +28,38 @@
  ],
  "fields": [
   {
+   "columns": 1,
    "fieldname": "task",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Task",
-   "options": "Task"
+   "label": "Task"
   },
   {
    "fieldname": "date",
    "fieldtype": "Date",
-   "in_list_view": 1,
    "label": "Date"
   },
   {
    "fieldname": "previous_amount",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Previous Task Amount"
   },
   {
    "fieldname": "current_amount",
    "fieldtype": "Currency",
+   "hidden": 1,
    "label": "Current Task Amount"
   },
   {
+   "columns": 2,
    "fieldname": "pc_raised",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Work Done Previous"
   },
   {
+   "columns": 1,
    "fieldname": "item",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -63,15 +67,16 @@
    "options": "Item"
   },
   {
+   "columns": 2,
    "fieldname": "pc_current",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "label": "Work Done Current"
   },
   {
+   "columns": 2,
    "fieldname": "pc_this",
    "fieldtype": "Currency",
-   "hidden": 1,
    "in_list_view": 1,
    "label": "Work Done This "
   },
@@ -92,11 +97,13 @@
   },
   {
    "fieldname": "section_break_5rteh",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "hidden": 1
   },
   {
    "fieldname": "column_break_ycj3m",
-   "fieldtype": "Column Break"
+   "fieldtype": "Column Break",
+   "hidden": 1
   },
   {
    "fieldname": "section_break_otzfv",
@@ -111,15 +118,24 @@
    "fieldtype": "Column Break"
   },
   {
+   "columns": 1,
    "fieldname": "qty",
    "fieldtype": "Float",
+   "in_list_view": 1,
    "label": "Quantity Completed"
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Qty"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-02-04 23:36:14.403450",
+ "modified": "2024-02-08 22:29:57.546382",
  "modified_by": "Administrator",
  "module": "Contract",
  "name": "Task Summary",

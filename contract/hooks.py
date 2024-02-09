@@ -29,7 +29,8 @@ app_license = "MIT"
 # include js in doctype views
 doctype_js = {
 	"Project" : "public/js/project.js",
-	"Task": "public/js/task.js"
+	"Task": "public/js/task.js",
+	"Sales Invoice": "public/js/sales_invoice.js"
 	}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -122,7 +123,6 @@ doctype_js = {
 doc_events = {
 	"Sales Invoice": {
 		"on_submit": "contract.events.sales_invoice.make_gl_entries",
-		"on_cancel": "contract.events.sales_invoice.update_project",
 	},
 	"Task": {
 		"before_save": "contract.events.task.update_progress",
@@ -131,6 +131,7 @@ doc_events = {
 	"Project": {
 		"after_insert": "contract.events.project.create_task",
 		"before_insert": "contract.events.project.update_task_summary",
+		"validate": "contract.events.project.calculate_this",
 	}
 }
 
