@@ -89,6 +89,7 @@ class PaymentApplication(Document):
 				frappe.db.set_value("Task Summary", row.task_summary, "pc_this", pc_current - (pc_raised+row.amount))
 
 			completed = frappe.db.get_value("Project",self.project,"custom_completed_value")
+			frappe.db.set_value("Project",self.project,"custom_previous_completed",completed)
 			frappe.db.set_value("Project",self.project,"custom_completed_value",completed+ self.net_total)
 			# frappe.db.set_value("Project",self.project,"custom_this_payment",self.net_total - completed)
 			self.calculate_this()
@@ -278,13 +279,14 @@ def create_invoice(source_name, target_doc=None, args=None):
 		if item_price:
 			frappe.db.set_value("Item Price", item_price[0], "price_list_rate", source_doc.rate)
 
+
 	target_doc = get_mapped_doc(
 		"Payment Application",
 		source_name,
 		{
 			"Payment Application": {
 				"doctype":"Sales Invoice",
-				"field_no_map":["taxes_and_charges"],
+				"field_no_map":["taxes_and_charges","sales_order"],
 				"field_map": {
 					"name": "custom_payment_application"
 				},
@@ -295,6 +297,7 @@ def create_invoice(source_name, target_doc=None, args=None):
 				"field_map": {
 					"name":"custom_pa_item",
 				},
+				"field_no_map":["parent","sales_order"],
 				"postprocess": update_item,
 			}
 		},

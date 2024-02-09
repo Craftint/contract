@@ -99,7 +99,8 @@ def calculate_this(doc,method=None):
     this = 0
     if doc.custom_tasks:
         for row in doc.custom_tasks:
-            this += row.pc_this
+            if row.pc_this:
+                this += row.pc_this
     doc.custom_this_payment = this
 
 def create_task(doc,method):
