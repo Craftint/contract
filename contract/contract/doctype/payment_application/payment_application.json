@@ -2215,7 +2215,7 @@
   },
   {
    "fieldname": "material_this_payment",
-   "fieldtype": "Data",
+   "fieldtype": "Currency",
    "label": "This Payment"
   },
   {
@@ -2493,14 +2493,8 @@
  ],
  "icon": "fa fa-file-text",
  "is_submittable": 1,
- "links": [
-  {
-   "group": "Reference",
-   "link_doctype": "POS Invoice",
-   "link_fieldname": "consolidated_invoice"
-  }
- ],
- "modified": "2024-02-09 01:49:12.774890",
+ "links": [],
+ "modified": "2024-02-15 11:45:53.974042",
  "modified_by": "Administrator",
  "module": "Contract",
  "name": "Payment Application",

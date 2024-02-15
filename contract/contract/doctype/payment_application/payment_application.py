@@ -240,7 +240,7 @@ class PaymentApplication(Document):
 	def update_details(self):
 		self.total_due_to_date = self.work_done_to_date + self.material_to_date
 		self.total_due_previous = self.work_done_previous + self.material_previous
-		self.total_due_this_payment = self.work_done_this_payment + self.material_this_payment
+		self.total_due_this_payment = self.work_done_this_payment + flt(self.material_this_payment)
 
 		self.td_this_date = self.adv_to_date + self.ret_to_date + self.rm_to_date + self.od_to_date
 		self.td_previous = self.adv_previous + self.ret_previous + self.rm_previous +self.od_previous
